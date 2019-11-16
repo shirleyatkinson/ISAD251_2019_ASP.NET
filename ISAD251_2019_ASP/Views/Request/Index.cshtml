@@ -1,0 +1,88 @@
+﻿
+<div class="container-fluid mt-1 px-1">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card border-primary mb-3">
+                <div class="card-header bg-primary text-white">Request</div>
+                <div class="card-body">
+                    <form asp-controller="Request" asp-action="Raise_Request" method="post">
+                        <div class="form-group row">
+                            <div class="col-sm-8">
+                                <select class="custom-select mr-sm-2" name="Modules">
+                                    <option selected>Choose...</option>
+                                    <option value="ISAD251">ISAD251</option>
+                                    <option value="SOFT252">SOFT252</option>
+                                    <option value="SEC104">SEC104</option>
+                                </select>
+                            </div>
+                            <label for="Modules" class="col-sm-2 col-form-label">Module Code</label>
+                            <div class="col-sm-2">
+                                <span class="btn btn-warning">Current Date Time</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+
+                            <div class="col-sm-8">
+                                <input type="text" name="StudentName" placeholder="Name" class="form-control" />
+                            </div>
+                            <label for="StudentName" class="col-sm-2 col-form-label">Your Name</label>
+                            <div class="col-sm-2">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3">
+                                <select class="custom-select mr-sm-2" name="Row">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                            <label for="Row" class="col-sm-1 col-form-label">Row</label>
+                            <div class="col-sm-3">
+                                <select class="custom-select mr-sm-2" name="Seat">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                            <label for="Seat" class="col-sm-1 col-form-label">Seat</label>
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-2">
+                                <span class="btn btn-warning">Room</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10"></div>
+                            <div class="col-sm-2">
+                                <select class="custom-select mr-sm-2" name="Room">
+                                    <option selected>Choose...</option>
+                                    <option value="SMB109">SMB 109</option>
+                                    <option value="SMB101">SMB 101</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-8">
+                                <textarea rows="3" name="Problem" placeholder="Problem Statement" class="form-control"></textarea>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-success" name="submit_Request">Submit</button>
+                            </div>
+                            <div class="col-sm-2"> <button type="reset" class="btn btn-danger">Cancel</button></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
