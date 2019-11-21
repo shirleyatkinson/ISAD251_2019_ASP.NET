@@ -1,4 +1,4 @@
-﻿
+﻿@model  ISAD251_2019_ASP.Models.ShModule
 
     <div class="container-fluid mt-1 px-1">
         <div class="row">
@@ -9,11 +9,10 @@
                         <form asp-controller="Request" asp-action="Raise_Request" method="post">
                             <div class="form-group row">
                                 <div class="col-sm-8">
-                                    <select class="custom-select mr-sm-2 form-control" name="ModuleID" >
-                                            
-                                        <option selected>-- Select Module Code--</option>
-                                        <option value="1">ISAD251</option>
-                                        <option value="2">SOFT252</option> 
+                                    <select class="custom-select mr-sm-2 form-control" name="ModuleID" asp-for="ModuleId"
+                                            asp-items="(IEnumerable<SelectListItem>)ViewBag.Modules">
+                                         <option value="">--Select Module Code--</option>   
+                 
                                     </select>
                                 </div>
                                 <label for="Modules" class="col-sm-2 col-form-label">Module Code</label>
