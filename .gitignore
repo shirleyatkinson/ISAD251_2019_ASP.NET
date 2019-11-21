@@ -338,3 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/ISAD251_2019_ASP/Models/Enter_Request.cs
