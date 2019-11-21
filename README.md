@@ -20,3 +20,9 @@ The functional requirements are as follows:
 **Reliability** : These are outside of the scope of the application and are dependent upon the set up of the labs and servers.
 
 **Security** : OWASP top 10 vulnerabilities are to be examined and addressed where appropriate.  Lecturers will be required to log in but students do not.  Only name information will be available to the lecturer to view.
+
+## Modelling
+The modelling items of Entity Relationship, data dictionary, class diagram, activity diagram and sequence diagrams are all contained in the application fact sheet to be found in the docs folder.  
+
+## Implementation
+Code for the implementation has been built up in stages.  Please see commits for more detail
