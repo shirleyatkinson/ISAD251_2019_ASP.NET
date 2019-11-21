@@ -85,5 +85,17 @@
                 </div>
             </div>
         </div>
-       
+       @{ 
+           if((ViewBag.Success !=null)&& ((int)ViewBag.Success != 0))
+           {
+               <div class="row">
+                   <div class="col-sm-12">
+                       <div class="card bg-success mb-3">
+                           <div class="card-header bg-success text-white">Request Successfully saved</div>
+                       </div>
+                   </div>
+               </div>
+           }
+       }
+
         </div>

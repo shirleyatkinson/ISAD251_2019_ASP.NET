@@ -31,6 +31,21 @@ namespace ISAD251_2019_ASP.Controllers
             return View();
         }
 
-       
+       [HttpPost]
+       public IActionResult Raise_Request(Enter_Request enter_Request)
+        {
+            var rowsaffected = _context.Database.ExecuteSqlRaw("EXEC Enter_Request @Name, @Room, @Row, @Seat, @Problem, @ModuleID",
+               new SqlParameter("@Name", enter_Request.Name.ToString()),
+               new SqlParameter("@Room", enter_Request.Room.ToString()),
+               new SqlParameter("@Row", enter_Request.Row),
+               new SqlParameter("@Seat", enter_Request.Seat),
+               new SqlParameter("@Problem", enter_Request.Problem.ToString()),
+               new SqlParameter("@ModuleID", enter_Request.ModuleID));
+
+            ViewBag.Success = rowsaffected;
+
+            return View("Index");
+
+        }
     }
 }
