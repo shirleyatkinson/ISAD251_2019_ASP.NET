@@ -1,28 +1,17 @@
 # ISAD251_2019_ASP.NET
-My Repository for demonstrating ISAD251 database application development
+My Repository for demonstrating ISAD251 database application development.  This page is my GitHub prototype page.  If this was a coursework submission then I would have links to a YouTube video, evidence of testing on more than one browser and finally evidence of web accessibility testing and results.  These will appear over time but are not yet complete. 
 
 Welcome to the repository for demonstrating the sample application, the **Student Help In Tutorials** application.  This application is designed to allow students to register their request for help within a tutorial in SMB109 which then uses the smart lights to alert the lecturer of where a student is looking for support.
 
-## Requirements
-The functional requirements are as follows:
-1.	As a student I wish to alert the lecturer that I need some help
-2.	As a student I wish to see that my request for help has been acknowledged
-3.	As a lecturer I wish to acknowledge the request
-4.	As a lecturer I wish to reset the request
+A link to a YouTube video of the application runnning will be provided here.
 
-## Non-functional requirements
-**Technical** : The application needs to be a web-based application that interacts with the Hue Lights in SMB109.  It runs on a web-server and is written in ASP.NET using the hosted Microsoft SQL Server database.  The interface for the student is via a desktop browser but the interface for the lecturer must be tailored for a mobile phone.
+## Student Help In Tutorial Application
+The requirements for this application are outlined in the attached application fact sheet.  The application has been written using ASP.NET and Microsoft Visual Studio, it uses the Philips Hue lights Developer RESTful API in SMB109.  
 
-**Performance** : Response times are not within the scope of this application.  These are determined by the network set up within the lab.
+[Home page](https://github.com/shirleyatkinson/ISAD251_2019_ASP.NET/blob/master/docs/index.png) The application begins with the home page giving an outline of the purpose of the application.  The Request button and nav bar link lead to the Request page shown below.
 
-**Usability** : The interfaces must conform to accessibility rules and good interface design.  Testing to be carried out via the W3 validator.
+[Request page](https://github.com/shirleyatkinson/ISAD251_2019_ASP.NET/blob/master/docs/Request.png) The Request page displays a selection of modules taken from the database.  One entering the data, the information is pass through to the stored procedure in the database ready to enter the request.  On successful completion of the request the lights in SMB109 will light up and indicate a colour specific to the seat. 
 
-**Reliability** : These are outside of the scope of the application and are dependent upon the set up of the labs and servers.
+The [Application Fact Sheet](https://github.com/shirleyatkinson/ISAD251_2019_ASP.NET/blob/master/docs/ISAD251_Unit9_Application_Fact_Sheet_Planning.pdf) outlines the requirements and non-functional requirements for the application and how it is used.  
 
-**Security** : OWASP top 10 vulnerabilities are to be examined and addressed where appropriate.  Lecturers will be required to log in but students do not.  Only name information will be available to the lecturer to view.
 
-## Modelling
-The modelling items of Entity Relationship, data dictionary, class diagram, activity diagram and sequence diagrams are all contained in the application fact sheet to be found in the docs folder.  
-
-## Implementation
-Code for the implementation has been built up in stages.  Please see commits for more detail
