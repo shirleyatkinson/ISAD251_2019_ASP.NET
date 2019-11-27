@@ -1,16 +1,14 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ISAD251_2019_ASP.Models
 {
-    public partial class ShRequest
+    public class request
     {
         public int RequestId { get; set; }
-        [JsonIgnore]
-        public string Name { get; set; }
+      
         public DateTime DateTime { get; set; }
         public string Room { get; set; }
         public int Row { get; set; }

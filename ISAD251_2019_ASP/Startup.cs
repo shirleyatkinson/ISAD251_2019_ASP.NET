@@ -29,6 +29,8 @@ namespace ISAD251_2019_ASP
 
             services.AddDbContext<ISAD251_SAtkinsonContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("ISAD251_DB")));
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +58,11 @@ namespace ISAD251_2019_ASP
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllers();
             });
+
+           
         }
     }
 }

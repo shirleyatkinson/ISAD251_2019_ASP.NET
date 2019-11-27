@@ -19,6 +19,9 @@ namespace ISAD251_2019_ASP.Models
         public virtual DbSet<ShModule> ShModule { get; set; }
         public virtual DbSet<ShRequest> ShRequest { get; set; }
         public virtual DbSet<ShStatus> ShStatus { get; set; }
+
+        //public virtual DbSet<request> Requests { get; set; }
+             
        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -76,6 +79,45 @@ namespace ISAD251_2019_ASP.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
             });
+
+            //modelBuilder.Entity<request>(entity =>
+            //{
+            //    entity.HasKey(e => e.RequestId)
+            //        .HasName("pk_Request");
+
+            //    entity.ToTable("sh-Request");
+
+            //    entity.Property(e => e.RequestId).HasColumnName("RequestID");
+
+            //    entity.Property(e => e.DateTime)
+            //        .HasColumnType("datetime")
+            //        .HasDefaultValueSql("(getdate())");
+
+            //    entity.Property(e => e.ModuleId).HasColumnName("ModuleID");
+            //    entity.Property(e => e.Problem)
+            //       .IsRequired()
+            //       .HasMaxLength(255)
+            //       .IsUnicode(false);
+
+            //    entity.Property(e => e.Room)
+            //        .IsRequired()
+            //        .HasMaxLength(255)
+            //        .IsUnicode(false);
+
+            //    entity.Property(e => e.StatusId).HasColumnName("StatusID");
+
+            //    entity.HasOne(d => d.Module)
+            //        .WithMany(p => p.ShRequest)
+            //        .HasForeignKey(d => d.ModuleId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("fk_Module_Request");
+
+            //    entity.HasOne(d => d.Status)
+            //        .WithMany(p => p.ShRequest)
+            //        .HasForeignKey(d => d.StatusId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("fk_Request_Status");
+            //});
 
             modelBuilder.Entity<ShRequest>(entity =>
             {
